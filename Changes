@@ -2,6 +2,9 @@ Revision history for Map-Agnostic
 
 {{$NEXT}}
 
+0.0.3  2019-05-15T11:08:46+02:00
+    - Also bump Hash::Agnostic dependency to 0.04 in use statement
+
 0.0.2  2019-02-08T18:44:44+01:00
     - Fix issue with STORE not taking :INITIALIZE
     - Fix issue with not setting $!initialized 

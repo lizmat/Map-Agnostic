@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/lizmat/Map-Agnostic.svg?branch=master)](https://travis-ci.org/lizmat/Map-Agnostic)
-
 NAME
 ====
 
