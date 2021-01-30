@@ -83,4 +83,4 @@ subtest {
 
 dies-ok { %m = @pairs }, 'cannot re-initialize a Map';
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4

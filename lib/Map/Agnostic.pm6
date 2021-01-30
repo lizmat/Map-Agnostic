@@ -1,24 +1,24 @@
 use v6.c;
 
-use Hash::Agnostic:ver<0.0.4>:auth<cpan:ELIZABETH>;
+use Hash::Agnostic:ver<0.0.7>:auth<cpan:ELIZABETH>;
 
-role Map::Agnostic:ver<0.0.3>:auth<cpan:ELIZABETH>
+role Map::Agnostic:ver<0.0.4>:auth<cpan:ELIZABETH>
   does Hash::Agnostic
 {
     has int $!initialized;
 
 #---- Methods supplied by Map::Agnostic needed by Hash::Agnostic ---------------
-    method ASSIGN-KEY(\key, \value) {
+    method ASSIGN-KEY(::?ROLE:D: \key, \value) {
         $!initialized
           ?? (die "Cannot change key '{key}' in an immutable {self.^name}")
           !! self.INIT-KEY(key, value)
     }
 
-    method BIND-KEY(\key, \value) {
+    method BIND-KEY(::?ROLE:D: \key, \value) {
         X::Bind.new(target => self.^name).throw;
     }
 
-    method DELETE-KEY(\key) {
+    method DELETE-KEY(::?ROLE:D: \key) {
         die "Can not remove values from a {self.^name}";
     }
 
@@ -121,10 +121,10 @@ Comments and Pull Requests are welcome.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018 Elizabeth Mattijsen
+Copyright 2018,2019,2021 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
 =end pod
 
-# vim: ft=perl6 expandtab sw=4
+# vim: expandtab shiftwidth=4
