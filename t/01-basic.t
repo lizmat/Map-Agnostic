@@ -30,9 +30,9 @@ sub test-basic() {
         is %m.Str,
           'a	42 b	666 c	314 d	628 e	271 f	6 g	7 h	8',
           'does .Str work ok';
-        is %m.perl,
+        is %m.raku,
           'MyMap.new(:a(42),:b(666),:c(314),:d(628),:e(271),:f(6),:g(7),:h(8))',
-          'does .perl work ok';
+          'does .raku work ok';
     }, 'test basic stuff after initialization';
 }
 

@@ -2,6 +2,10 @@ Revision history for Map-Agnostic
 
 {{$NEXT}}
 
+0.0.5  2021-07-18T15:49:59+02:00
+    - Bump dependency to Hash::Agnostic 0.0.9
+    - Fix deprecation message from testing
+
 0.0.4  2021-01-30T13:06:53+01:00
     - Bump dependency to Hash::Agnostic 0.0.7
     - Make sure that implemented methods take instances only

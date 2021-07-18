@@ -1,8 +1,8 @@
 use v6.c;
 
-use Hash::Agnostic:ver<0.0.7>:auth<cpan:ELIZABETH>;
+use Hash::Agnostic:ver<0.0.9>:auth<cpan:ELIZABETH>;
 
-role Map::Agnostic:ver<0.0.4>:auth<cpan:ELIZABETH>
+role Map::Agnostic:ver<0.0.5>:auth<cpan:ELIZABETH>
   does Hash::Agnostic
 {
     has int $!initialized;

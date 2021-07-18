@@ -6,7 +6,7 @@
   "build-depends": [
   ],
   "depends": [
-    "Hash::Agnostic:ver<0.0.7>:auth<cpan:ELIZABETH>"
+    "Hash::Agnostic:ver<0.0.9>:auth<cpan:ELIZABETH>"
   ],
   "description": "be a map without knowing how",
   "license": "Artistic-2.0",
@@ -23,5 +23,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.4"
+  "version": "0.0.5"
 }
