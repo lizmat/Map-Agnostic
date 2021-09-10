@@ -2,6 +2,12 @@ Revision history for Map-Agnostic
 
 {{$NEXT}}
 
+0.0.6  2021-09-10T11:25:08+02:00
+    - Change file extension to .rakumod
+    - Migrate to zef ecosystem
+    - Update email address
+    - Updated dependency
+
 0.0.5  2021-07-18T15:49:59+02:00
     - Bump dependency to Hash::Agnostic 0.0.9
     - Fix deprecation message from testing

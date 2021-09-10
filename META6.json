@@ -1,19 +1,19 @@
 {
-  "auth": "cpan:ELIZABETH",
+  "auth": "zef:lizmat",
   "authors": [
     "Elizabeth Mattijsen"
   ],
   "build-depends": [
   ],
   "depends": [
-    "Hash::Agnostic:ver<0.0.9>:auth<cpan:ELIZABETH>"
+    "Hash::Agnostic:ver<0.0.10>:auth<zef:lizmat>"
   ],
   "description": "be a map without knowing how",
   "license": "Artistic-2.0",
   "name": "Map::Agnostic",
   "perl": "6.c",
   "provides": {
-    "Map::Agnostic": "lib/Map/Agnostic.pm6"
+    "Map::Agnostic": "lib/Map/Agnostic.rakumod"
   },
   "resources": [
   ],
@@ -23,5 +23,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
