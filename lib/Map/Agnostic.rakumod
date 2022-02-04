@@ -77,7 +77,7 @@ provides all of the C<Map> functionality while only needing to implement
   method INIT-KEY($key, $value) { ... }
 
 Bind the given value to the given key in the map, and return the value.
-This will only be called during initialization of the C<Map>.  The functioality
+This will only be called during initialization of the C<Map>.  The functionality
 is the same as the C<BIND-KEY> method, but it will only be called at
 initialization time, whereas C<BIND-KEY> can be called at any time and will
 fail.
