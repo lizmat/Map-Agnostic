@@ -32,7 +32,7 @@ Required Methods
 
     method INIT-KEY($key, $value) { ... }
 
-Bind the given value to the given key in the map, and return the value. This will only be called during initialization of the `Map`. The functioality is the same as the `BIND-KEY` method, but it will only be called at initialization time, whereas `BIND-KEY` can be called at any time and will fail.
+Bind the given value to the given key in the map, and return the value. This will only be called during initialization of the `Map`. The functionality is the same as the `BIND-KEY` method, but it will only be called at initialization time, whereas `BIND-KEY` can be called at any time and will fail.
 
 ### method AT-KEY
 
@@ -66,10 +66,12 @@ Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/Map-Agnostic . Comments and Pull Requests are welcome.
 
+If you like this module, or what I’m doing more generally, committing to a [small sponsorship](https://github.com/sponsors/lizmat/) would mean a great deal to me!
+
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018, 2019, 2021 Elizabeth Mattijsen
+Copyright 2018, 2019, 2021, 2023 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

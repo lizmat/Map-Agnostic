@@ -12,7 +12,7 @@ class MyMap does Map::Agnostic {
     method keys()                { %!hash.keys                  }
 }
 
-plan 7;
+plan 8;
 
 my @keys   := <a b c d e f g h>;
 my @values := 42, 666, 314, 628, 271, 6, 7, 8;
@@ -82,5 +82,12 @@ subtest {
 }, 'can we do value slices';
 
 dies-ok { %m = @pairs }, 'cannot re-initialize a Map';
+
+subtest {
+    plan 3;
+    is-deeply +%m, 8,    'does it numerify ok';
+    is-deeply ?%m, True, 'does it boolify ok';
+    is-deeply %m.Int, 8, 'does it intify ok';
+}
 
 # vim: expandtab shiftwidth=4
