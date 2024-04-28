@@ -2,6 +2,11 @@ Revision history for Map-Agnostic
 
 {{$NEXT}}
 
+0.0.8  2024-04-28T12:50:54+02:00
+    - Up dependency on Hash::Agnostic
+    - Use modern extension for test files
+    - Update copyright year
+
 0.0.7  2023-12-15T23:54:49+01:00
     - Up dependency on Hash::Agnostic for .Numeric, .Int, .Bool
     - Add sponsor link
