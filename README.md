@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/lizmat/Map-Agnostic/workflows/test/badge.svg)](https://github.com/lizmat/Map-Agnostic/actions)
+[![Actions Status](https://github.com/lizmat/Map-Agnostic/actions/workflows/linux.yml/badge.svg)](https://github.com/lizmat/Map-Agnostic/actions) [![Actions Status](https://github.com/lizmat/Map-Agnostic/actions/workflows/macos.yml/badge.svg)](https://github.com/lizmat/Map-Agnostic/actions) [![Actions Status](https://github.com/lizmat/Map-Agnostic/actions/workflows/windows.yml/badge.svg)](https://github.com/lizmat/Map-Agnostic/actions)
 
 NAME
 ====
