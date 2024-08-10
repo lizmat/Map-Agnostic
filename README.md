@@ -8,17 +8,19 @@ Map::Agnostic - be a map without knowing how
 SYNOPSIS
 ========
 
-    use Map::Agnostic;
-    class MyMap does Map::Agnostic {
-        method INIT-KEY($key,$value) { ... }
-        method AT-KEY($key)          { ... }
-        method EXISTS-KEY($key)      { ... }
-        method keys()                { ... }
-    }
+```raku
+use Map::Agnostic;
+class MyMap does Map::Agnostic {
+    method INIT-KEY($key,$value) { ... }
+    method AT-KEY($key)          { ... }
+    method EXISTS-KEY($key)      { ... }
+    method keys()                { ... }
+}
 
-    my %m is MyMap = a => 42, b => 666;
+my %m is MyMap = a => 42, b => 666;
 
-    my %m is Map::Agnostic = ...;
+my %m is Map::Agnostic = ...;
+```
 
 DESCRIPTION
 ===========
@@ -30,25 +32,33 @@ Required Methods
 
 ### method INIT-KEY
 
-    method INIT-KEY($key, $value) { ... }
+```raku
+method INIT-KEY($key, $value) { ... }
+```
 
 Bind the given value to the given key in the map, and return the value. This will only be called during initialization of the `Map`. The functionality is the same as the `BIND-KEY` method, but it will only be called at initialization time, whereas `BIND-KEY` can be called at any time and will fail.
 
 ### method AT-KEY
 
-    method AT-KEY($key) { ... }
+```raku
+method AT-KEY($key) { ... }
+```
 
 Return the value at the given key in the map.
 
 ### method EXISTS-KEY
 
-    method EXISTS-KEY($key) { ... }
+```raku
+method EXISTS-KEY($key) { ... }
+```
 
 Return `Bool` indicating whether the key exists in the map.
 
 ### method keys
 
-    method keys() { ... }
+```raku
+method keys() { ... }
+```
 
 Return the keys that currently exist in the map, in any order that is most convenient.
 

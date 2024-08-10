@@ -12,7 +12,7 @@ class MyMap does Map::Agnostic {
     method keys()                { %!hash.keys                  }
 }
 
-plan 8;
+plan 14;
 
 my @keys   := <a b c d e f g h>;
 my @values := 42, 666, 314, 628, 271, 6, 7, 8;
@@ -88,6 +88,16 @@ subtest {
     is-deeply +%m, 8,    'does it numerify ok';
     is-deeply ?%m, True, 'does it boolify ok';
     is-deeply %m.Int, 8, 'does it intify ok';
-}
+}, 'does it xxify ok';
+
+is-deeply Map::Agnostic.raku, 'Map::Agnostic', 'does .raku work on type object';
+quietly is-deeply Map::Agnostic.Str, '',       'does .Str  work on type object';
+is-deeply Map::Agnostic.gist, '(Agnostic)',    'does .gist work on type object';
+
+class A does Hash::Agnostic { }
+
+is-deeply A.raku,       'A', 'does .raku work on class type object';
+quietly is-deeply A.Str, '', 'does .Str  work on class type object';
+is-deeply A.gist,     '(A)', 'does .gist work on class type object';
 
 # vim: expandtab shiftwidth=4

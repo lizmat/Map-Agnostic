@@ -1,6 +1,6 @@
 use v6.c;
 
-use Hash::Agnostic:ver<0.0.14>:auth<zef:lizmat>;
+use Hash::Agnostic:ver<0.0.16>:auth<zef:lizmat>;
 
 role Map::Agnostic does Hash::Agnostic {
     has int $!initialized;
@@ -49,17 +49,21 @@ Map::Agnostic - be a map without knowing how
 
 =head1 SYNOPSIS
 
-  use Map::Agnostic;
-  class MyMap does Map::Agnostic {
-      method INIT-KEY($key,$value) { ... }
-      method AT-KEY($key)          { ... }
-      method EXISTS-KEY($key)      { ... }
-      method keys()                { ... }
-  }
+=begin code :lang<raku>
 
-  my %m is MyMap = a => 42, b => 666;
+use Map::Agnostic;
+class MyMap does Map::Agnostic {
+    method INIT-KEY($key,$value) { ... }
+    method AT-KEY($key)          { ... }
+    method EXISTS-KEY($key)      { ... }
+    method keys()                { ... }
+}
 
-  my %m is Map::Agnostic = ...;
+my %m is MyMap = a => 42, b => 666;
+
+my %m is Map::Agnostic = ...;
+
+=end code
 
 =head1 DESCRIPTION
 
@@ -72,7 +76,11 @@ provides all of the C<Map> functionality while only needing to implement
 
 =head3 method INIT-KEY
 
-  method INIT-KEY($key, $value) { ... }
+=begin code :lang<raku>
+
+method INIT-KEY($key, $value) { ... }
+
+=end code
 
 Bind the given value to the given key in the map, and return the value.
 This will only be called during initialization of the C<Map>.  The functionality
@@ -82,19 +90,31 @@ fail.
 
 =head3 method AT-KEY
 
-  method AT-KEY($key) { ... }
+=begin code :lang<raku>
+
+method AT-KEY($key) { ... }
+
+=end code
 
 Return the value at the given key in the map.
 
 =head3 method EXISTS-KEY
 
-  method EXISTS-KEY($key) { ... }
+=begin code :lang<raku>
+
+method EXISTS-KEY($key) { ... }
+
+=end code
 
 Return C<Bool> indicating whether the key exists in the map.
 
 =head3 method keys
 
-  method keys() { ... }
+=begin code :lang<raku>
+
+method keys() { ... }
+
+=end code
 
 Return the keys that currently exist in the map, in any order that is
 most convenient.
