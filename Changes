@@ -1,6 +1,8 @@
 Revision history for Map-Agnostic
 
 {{$NEXT}}
+
+0.0.11  2025-01-15T11:47:22+01:00
     - Up dependency on Hash::Agnostic
     - Update copyright year
 
