@@ -6,9 +6,9 @@
   "build-depends": [
   ],
   "depends": [
-    "Hash::Agnostic:ver<0.0.16>:auth<zef:lizmat>"
+    "Hash::Agnostic:ver<0.0.17+>:auth<zef:lizmat>"
   ],
-  "description": "be a map without knowing how",
+  "description": "be a Map without knowing how",
   "license": "Artistic-2.0",
   "name": "Map::Agnostic",
   "perl": "6.c",
@@ -19,6 +19,7 @@
   ],
   "source-url": "https://github.com/lizmat/Map-Agnostic.git",
   "tags": [
+    "MAP",
     "UTILS"
   ],
   "test-depends": [

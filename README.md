@@ -3,7 +3,7 @@
 NAME
 ====
 
-Map::Agnostic - be a map without knowing how
+Map::Agnostic - be a Map without knowing how
 
 SYNOPSIS
 ========
@@ -81,7 +81,7 @@ If you like this module, or what I’m doing more generally, committing to a [sm
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2018, 2019, 2021, 2023, 2024 Elizabeth Mattijsen
+Copyright 2018, 2019, 2021, 2023, 2024, 2025 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
