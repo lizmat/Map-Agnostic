@@ -1,6 +1,8 @@
 Revision history for Map-Agnostic
 
 {{$NEXT}}
+
+0.0.12  2026-02-15T13:09:40+01:00
     - Modernize META6.json
     - 100% coverage testing
     - Up dependency on Hash::Agnostic
