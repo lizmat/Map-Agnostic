@@ -1,4 +1,3 @@
-use v6.c;
 use Test;
 
 use Map::Agnostic;
@@ -12,7 +11,7 @@ class MyMap does Map::Agnostic {
     method keys()                { %!hash.keys                  }
 }
 
-plan 14;
+plan 20;
 
 my @keys   := <a b c d e f g h>;
 my @values := 42, 666, 314, 628, 271, 6, 7, 8;
@@ -38,29 +37,29 @@ sub test-basic() {
 
 test-basic;
 
-subtest {
+subtest 'checking iterator' => {
     plan +@keys;
     my %test = @pairs;
     is %test{.key}, .value, "did iteration {.key} produce %test{.key}"
       for %m;
-}, 'checking iterator';
+}
 
-subtest {
+subtest 'checking {x}' => {
     plan +@keys;
     my %test = @pairs;
     is %m{$_}, %test{$_}, "did key $_ produce %test{$_}"
       for @keys;
-}, 'checking {x}';
+}
 
-subtest {
+subtest 'attempt deletion of key' => {
     plan 4;
     ok %m<g>:exists, 'does "g" exist';
     dies-ok { %m<g>:delete }, 'does :delete NOT work on "g"';
     ok %m<g>:exists, 'does element still exist';
     is %m.elems, +@keys, 'do we have same number of elems: elems';
-}, 'attempt deletion of key';
+}
 
-subtest {
+subtest 'can we NOT delete a slice' => {
     plan 4;
     is-deeply %m<d e f>:exists, (True,True,True),
       'can we check existence of an existing slice';
@@ -69,9 +68,9 @@ subtest {
     is-deeply %m<d e f>:exists, (True,True,True),
       'can we check existence of still existing slice';
     is %m.elems, +@keys, 'did we NOT update number of elements';
-}, 'can we NOT delete a slice';
+}
 
-subtest {
+subtest 'can we do value slices' => {
     plan 3;
     is-deeply (%m{@keys}:v).sort, (6,7,8,42,271,314,628,666),
       'does a value slice work';
@@ -79,16 +78,23 @@ subtest {
       'does a value zen-slice work';
     is-deeply (%m{*}:v).sort, (6,7,8,42,271,314,628,666),
       'does a value whatever-slice work';
-}, 'can we do value slices';
+}
 
-dies-ok { %m = @pairs }, 'cannot re-initialize a Map';
+dies-ok { %m = @pairs },   'cannot re-initialize a Map';
+dies-ok { %m<a>   = 666 }, 'cannot assign to a non-existing key';
+dies-ok { %m<a>  := 666 }, 'cannot bind to a non-existing key';
+dies-ok { %m<foo> = 42  }, 'cannot assign to a non-existing key';
 
-subtest {
+dies-ok { %m.append("i",777) }, 'cannot append to a Map';
+dies-ok { %m.push("i",777)   }, 'cannot push to a Map';
+dies-ok { %m.grab("i")       }, 'cannot grab from a Map';
+
+subtest 'does it xxify ok' => {
     plan 3;
     is-deeply +%m, 8,    'does it numerify ok';
     is-deeply ?%m, True, 'does it boolify ok';
     is-deeply %m.Int, 8, 'does it intify ok';
-}, 'does it xxify ok';
+}
 
 is-deeply Map::Agnostic.raku, 'Map::Agnostic', 'does .raku work on type object';
 quietly is-deeply Map::Agnostic.Str, '',       'does .Str  work on type object';

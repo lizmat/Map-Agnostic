@@ -7,7 +7,6 @@ Map::Agnostic - be a Map without knowing how
 =head1 SYNOPSIS
 
 =begin code :lang<raku>
-
 use Map::Agnostic;
 class MyMap does Map::Agnostic {
     method INIT-KEY($key,$value) { ... }
@@ -19,7 +18,6 @@ class MyMap does Map::Agnostic {
 my %m is MyMap = a => 42, b => 666;
 
 my %m is Map::Agnostic = ...;
-
 =end code
 
 =head1 DESCRIPTION
@@ -34,9 +32,7 @@ provides all of the C<Map> functionality while only needing to implement
 =head3 method INIT-KEY
 
 =begin code :lang<raku>
-
 method INIT-KEY($key, $value) { ... }
-
 =end code
 
 Bind the given value to the given key in the map, and return the value.
@@ -48,9 +44,7 @@ fail.
 =head3 method AT-KEY
 
 =begin code :lang<raku>
-
 method AT-KEY($key) { ... }
-
 =end code
 
 Return the value at the given key in the map.
@@ -58,9 +52,7 @@ Return the value at the given key in the map.
 =head3 method EXISTS-KEY
 
 =begin code :lang<raku>
-
 method EXISTS-KEY($key) { ... }
-
 =end code
 
 Return C<Bool> indicating whether the key exists in the map.
@@ -68,9 +60,7 @@ Return C<Bool> indicating whether the key exists in the map.
 =head3 method keys
 
 =begin code :lang<raku>
-
 method keys() { ... }
-
 =end code
 
 Return the keys that currently exist in the map, in any order that is
@@ -100,7 +90,7 @@ deal to me!
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2018, 2019, 2021, 2023, 2024, 2025 Elizabeth Mattijsen
+Copyright 2018, 2019, 2021, 2023, 2024, 2025, 2026 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
