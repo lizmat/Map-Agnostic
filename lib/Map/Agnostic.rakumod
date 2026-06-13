@@ -1,4 +1,4 @@
-use Hash::Agnostic:ver<0.0.19+>:auth<zef:lizmat>;
+use Hash::Agnostic:ver<0.0.20+>:auth<zef:lizmat>;
 
 role Map::Agnostic does Hash::Agnostic {
     has int $!initialized;
