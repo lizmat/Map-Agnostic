@@ -2,6 +2,9 @@ Revision history for Map-Agnostic
 
 {{$NEXT}}
 
+0.0.14  2026-06-13T20:37:28+02:00
+    - Move repo to Codeberg
+
 0.0.13  2026-06-13T17:55:46+02:00
     - Bump Hash::Agnostic to fix immutability snafu that
       showed itself through Ecosystem and Map::Match

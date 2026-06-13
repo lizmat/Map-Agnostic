@@ -21,11 +21,11 @@
   "raku": "6.c",
   "resources": [
   ],
-  "source-url": "https://github.com/lizmat/Map-Agnostic.git",
+  "source-url": "https://codeberg.org/lizmat/Map-Agnostic.git",
   "support": {
-    "bugtracker": "https://github.com/lizmat/Map-Agnostic/issues",
+    "bugtracker": "https://codeberg.org/lizmat/Map-Agnostic/issues",
     "email": "liz@raku.rocks",
-    "source": "https://github.com/lizmat/Map-Agnostic.git"
+    "source": "https://codeberg.org/lizmat/Map-Agnostic.git"
   },
   "tags": [
     "MAP",
@@ -33,5 +33,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.13"
+  "version": "0.0.14"
 }
